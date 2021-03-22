@@ -10,11 +10,12 @@ header{
 section#painel{
     background-color: white;
     border-radius: 10px;
-    width: 400px;
+    width: 315px;
     margin: auto;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.308);
-    text-align: center;
     padding: 15pt;
+    text-align: left;
+    
 }
 footer{
     color: white;
@@ -23,14 +24,15 @@ footer{
     margin-top: 10pt;
 
 }
-input#entrada{
-    width: 50pt;
+input#binary{
+    width: 100pt;
+    position: relative;
+    left: 11pt;
 }
-
-p#res{
-    font-size: 20pt;
+input#button1{
+    position: relative;
+    left: 11pt;
 }
-
-input#button{
-    bottom: 10pt;
+input#decimal{
+    width: 100pt;
 }
