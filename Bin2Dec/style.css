@@ -1,5 +1,5 @@
 body{  
-    background-color: rgb(253, 194, 160);
+    background-color: rgb(160, 203, 253);
     font: normal 15pt Arial;
 }
 header{
@@ -14,7 +14,7 @@ section#painel{
     margin: auto;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.308);
     text-align: center;
-    padding: 10pt;
+    padding: 15pt;
 }
 footer{
     color: white;
@@ -22,4 +22,15 @@ footer{
     font-size: 10pt;
     margin-top: 10pt;
 
+}
+input#entrada{
+    width: 50pt;
+}
+
+p#res{
+    font-size: 20pt;
+}
+
+input#button{
+    bottom: 10pt;
 }
