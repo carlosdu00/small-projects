@@ -1,0 +1,39 @@
+body{
+    background-color: rgb(121, 43, 43);
+    font: normal 12pt Arial;
+}
+header{
+    font-size: 20pt;
+    color: white;
+    text-align: center;
+}
+section{
+    background-color: rgb(255, 255, 255) ;
+    border-radius: 10px;
+    width: 400px;
+    margin: auto;
+    padding: 15px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.308);
+}
+
+div#infos{
+    text-align:right;
+    position: relative;
+    right: 125pt;
+}
+input#calcular{
+    position: relative;
+    right: 86pt;
+}
+
+div#res{
+    text-align: center;
+}
+
+footer{
+    color: white;
+    text-align: center;
+    font-size: 9pt;
+    margin-top: 10pt;
+
+}
