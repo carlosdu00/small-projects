@@ -18,13 +18,13 @@ function calcular() {
 
         if (inicio < fim) {
             while (inicio <= fim) {
-                sequencia = sequencia + ">" + inicio
+                sequencia = sequencia + "👉" + inicio
                 inicio = inicio + 1 + salto
             }
         }
         else if (inicio > fim) {
             while (inicio >= fim) {
-                sequencia = sequencia + ">" + inicio
+                sequencia = sequencia + "👉" + inicio
                 inicio = inicio - 1 - salto
             }
         }
@@ -32,7 +32,7 @@ function calcular() {
             sequencia = "Valores inválidos"
             res.innerText = sequencia
         }
-            
+        sequencia=sequencia+"🏁"
         res.innerText = sequencia
     }
 }
