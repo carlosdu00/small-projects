@@ -1,0 +1,33 @@
+body{
+    background-color: rgb(43, 43, 43);
+    font: normal 12pt Arial;
+}
+header{
+    font-size: 20pt;
+    color: white;
+    text-align: center;
+}
+input#inputborder{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 30pt;
+}
+div#painel{
+    background-color: white ;
+    width: 300pt;
+    height: 200pt;
+    margin: auto;
+    margin-top: 30pt;
+}
+p#res{ 
+    position: relative;
+    top: 46%;
+    text-align: center;
+}
+footer{
+    color: white;
+    text-align: center;
+    font-size: 10pt;
+    margin-top: 10pt;
+}
