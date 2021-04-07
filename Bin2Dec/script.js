@@ -9,10 +9,10 @@ function converter1() {
         window.alert("Please, Enter only 0 or 1")
     }
     else {
-        var res = document.getElementById("decimal")
-        var total = 0
-        var x = 0
-        for (var i = binary.length - 1; i >= 0; i--) {
+        let res = document.getElementById("decimal")
+        let total = 0
+        let x = 0
+        for (let i = binary.length - 1; i >= 0; i--) {
             total = total + (binary[i] * Math.pow(2, x))
             x++
         }
@@ -28,10 +28,10 @@ function converter2() {
         window.alert("Please, enter 8 or less digits")
     }
     else {
-        var res = document.getElementById("binary")
-        var total = ""
+        let res = document.getElementById("binary")
+        let total = ""
 
-        for (var i = 7; decimal != 0; i--) {
+        for (let i = 7; decimal != 0; i--) {
 
             if (decimal % 2 != 0) {
                 total = "1" + total
@@ -51,7 +51,7 @@ function converter2() {
 
 
 function bincheck(entrada) {
-    for (var i = entrada.length - 1; i >= 0; i--) {
+    for (let i = entrada.length - 1; i >= 0; i--) {
         if (entrada[i] != 0 && entrada[i] != 1) {
             return false
         }

@@ -1,6 +1,7 @@
 function makeborder() {
     inputbordertxt = document.getElementById("inputborder")
-    res = document.getElementById("res")
+    let res = document.getElementById("res")
+    let inputborder
     if (inputbordertxt.value.length == 0) {
         inputborder = 0
     }

@@ -1,9 +1,9 @@
 function verificar(){
-    var fotohora = document.getElementById("fotohora")
+    let fotohora = document.getElementById("fotohora")
 
-    var agora = new Date()
-    var hora = agora.getHours()
-    var frase = document.getElementById("frase")
+    let agora = new Date()
+    let hora = agora.getHours()
+    let frase = document.getElementById("frase")
     if(hora==1){
         frase.innerText = (`Agora é 1 hora`)
     }
