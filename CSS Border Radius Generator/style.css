@@ -1,20 +1,20 @@
 body{
-    background-color: rgb(43, 43, 43);
+    background-color: rgb(30, 25, 37);
     font: normal 12pt Arial;
 }
 header{
     font-size: 20pt;
-    color: white;
+    color: rgb(179, 180, 196);
     text-align: center;
 }
 input#inputborder{
     display: block;
     margin-right: auto;
-    margin-left: auto;
+    margin-left: auto;  
     margin-top: 30pt;
 }
 div#painel{
-    background-color: white ;
+    background-color: rgb(60, 59, 87) ;
     width: 300pt;
     height: 200pt;
     margin: auto;
