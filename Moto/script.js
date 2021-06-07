@@ -1,9 +1,29 @@
-var res = document.getElementById("res")
+var mostradorMarcha = document.getElementById("mostradorMarcha")
 var VelocidadeAntiga = 5
 
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
+
+document.addEventListener("keydown", function(event) {//detecta qual tecla esta sendo precionada
+
+console.log(event.key)
+
+if (event.key === "ArrowUp") {
+    salvarVelocidade();moto.acelerar();moverPonteiro();
+}
+else if (event.key === "ArrowDown") {
+    salvarVelocidade();moto.freiar();moverPonteiro();
+}
+else if (event.key === "a") {
+    moto.subirMarcha();atualizarMostradorMarcha()
+}
+else if (event.key === "z") {
+    moto.descerMarcha();atualizarMostradorMarcha()
+}
+
+
+})
 
 const moto = {
     velocidade: 0,
@@ -76,10 +96,10 @@ async function moverPonteiro() {
     }
 }
 
-function atualizarMostrador() {
-    res.innerText = `${moto.velocidade}   ${moto.marcha}`
+function atualizarMostradorMarcha() {
+    mostradorMarcha.innerText = `${moto.marcha}`
 }
 
 function salvarVelocidade() {
-    VelocidadeAntiga = moto.velocidade
+    VelocidadeAntiga = moto.velocidade //essa variavel é importante para o ponteiro fazer a animaçao para o lado certo
 }

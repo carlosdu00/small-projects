@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 
-<body onload="moverPonteiro();atualizarMostrador()">
+<body onload="moverPonteiro();atualizarMostradorMarcha()">
     <header>
         <h1>Moto</h1>
     </header>
@@ -18,12 +18,10 @@
         <div class="display">
             <img id="velocimetro" src="velocimetro.png" />
             <img id="ponteiro" src="ponteiro.png" />
+            <p id="mostradorMarcha"></p>
+            <p>Comandos: ↑ e ↓: acelerar e freiar</p>
+            <p>"a" e "z": subir marcha e descer marcha</p>
         </div>
-        <input type="button" value="acelerar" onclick="salvarVelocidade();moto.acelerar();moverPonteiro();atualizarMostrador()">
-        <input type="button" value="freiar" onclick="salvarVelocidade();moto.freiar();moverPonteiro();atualizarMostrador()">
-        <input type="button" value="subirMarcha" onclick="moto.subirMarcha();atualizarMostrador()">
-        <input type="button" value="descerMarcha" onclick="moto.descerMarcha();atualizarMostrador()">
-        <p id="res"></p>
     </section>
     <footer>
         <p>Carlos Schumacher</p>
