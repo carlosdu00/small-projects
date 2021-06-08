@@ -28,7 +28,7 @@ else if (event.key === "z") {
 const moto = {
     velocidade: 0,
     marcha: 0,
-    acelerar: function () { verificarVelocidade("acelerar"); if (moto.velocidade > 100) { moto.velocidade = 100 } },
+    acelerar: function () { verificarVelocidade("acelerar")},
     freiar: function () { (this.velocidade >= 5) ? this.velocidade -= 5 : this.velocidade = 0 },
     subirMarcha: function () { if (this.marcha < 5) { this.marcha += 1 } },
     descerMarcha: function () { if (this.marcha > 0 && verificarVelocidade("descer")) { this.marcha -= 1 } }
@@ -36,44 +36,47 @@ const moto = {
 
 function verificarVelocidade(acao) {
     switch (moto.marcha) {
-        case 0:
-            if (acao == "acelerar") { return false }
-            else if (acao == "descer") { return false }
-            break;
         case 1:
-            if (acao == "acelerar") { moto.velocidade += 5 }
+            if (acao == "acelerar") {
+                if(moto.velocidade <= 20){moto.velocidade += 5}
+                if(moto.velocidade > 20){moto.velocidade = 20}
+            }
             else if (acao == "descer" && moto.velocidade <= 20) { return true }
             break;
         case 2:
             if (acao == "acelerar") {
-                if (moto.velocidade >= 20) { moto.velocidade += 5 }
                 if (moto.velocidade < 20) { moto.velocidade += 2 }
+                else if (moto.velocidade >= 20 && moto.velocidade <= 40) { moto.velocidade += 5 }
+                if(moto.velocidade > 40){moto.velocidade = 40}
             }
             else if (acao == "descer" && moto.velocidade <= 40) { return true }
             break;
         case 3:
             if (acao == "acelerar") {
-                if (moto.velocidade >= 40) { moto.velocidade += 5 }
                 if (moto.velocidade < 40) { moto.velocidade += 2 }
+                else if (moto.velocidade >= 40 && moto.velocidade <= 60) { moto.velocidade += 5 }
+                if(moto.velocidade > 60){moto.velocidade = 60}
             }
             else if (acao == "descer" && moto.velocidade <= 60) { return true }
             break;
         case 4:
             if (acao == "acelerar") {
-                if (moto.velocidade >= 60) { moto.velocidade += 5 }
                 if (moto.velocidade < 60) { moto.velocidade += 2 }
+                else if (moto.velocidade >= 60 && moto.velocidade <= 80) { moto.velocidade += 5 }
+                if(moto.velocidade > 80){moto.velocidade = 80}
             }
             else if (acao == "descer" && moto.velocidade <= 80) { return true }
             break;
         case 5:
             if (acao == "acelerar") {
-                if (moto.velocidade >= 80) { moto.velocidade += 5 }
                 if (moto.velocidade < 80) { moto.velocidade += 2 }
+                else if (moto.velocidade >= 80 && moto.velocidade <= 100) { moto.velocidade += 5 }
+                if(moto.velocidade > 100){moto.velocidade = 100}
             }
             else if (acao == "descer" && moto.velocidade <= 100) { return true }
             break;
         default:
-            window.alert("ERRO!")
+            return
             break;
     }
 }
@@ -85,13 +88,13 @@ async function moverPonteiro() {
         while (velocidadeMostradaPonteiro < moto.velocidade) {
             await sleep(30);
             velocidadeMostradaPonteiro += 1
-            ponteiro.setAttribute("style", "transform: rotate(" + (velocidadeMostradaPonteiro * 221 / 100 - 7) + "deg)");
+            ponteiro.setAttribute("style", "transform: rotate(" + (velocidadeMostradaPonteiro * 216/ 100 - 5) + "deg)");
         }
     } else {
         while (velocidadeMostradaPonteiro > moto.velocidade) {
             await sleep(30);
             velocidadeMostradaPonteiro -= 1
-            ponteiro.setAttribute("style", "transform: rotate(" + (velocidadeMostradaPonteiro * 221 / 100 - 7) + "deg)");
+            ponteiro.setAttribute("style", "transform: rotate(" + (velocidadeMostradaPonteiro * 216 / 100 - 5) + "deg)");
         }
     }
 }
