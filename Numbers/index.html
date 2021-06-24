@@ -4,22 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NUmbers</title>
+    <title>Numbers</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
     <header><h1>Numbers</h1></header>
     <section>
-        <div>
+        <div id="barrasuperior">
             <p>Number: <input type="number" name="num" id="txtn">
                 <input id="button" type="button" value="Adicionar" onclick="add()">
             </p>
         </div>
         <div>
-            <select name="tabela" id="seltable" size="10"></select>
+            <select name="tabela" class="hidden" id="seltable" size="10"></select>
         </div>
-        <div><input type="button" value="Calculate" onclick="calculate()"></div>
+        <div><input type="button" class="hidden" id="calculatebtn" value="Calculate" onclick="calculate()"></div>
         <div>
             <p id="res"></p>
         </div>

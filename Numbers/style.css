@@ -10,7 +10,7 @@ header{
 section{
     background-color: rgb(255, 255, 255) ;
     border-radius: 10px;
-    width: 400px;
+    width: 500px;
     margin: auto;
     padding: 15px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.308);
@@ -20,4 +20,18 @@ footer{
     text-align: center;
     font-size: 9pt;
     margin-top: 10pt;
+}
+#barrasuperior{
+    text-align: center;
+}
+.hidden{
+    visibility: collapse;
+}
+.visible{
+    visibility: visible;
+}
+#res{
+    position: absolute;
+    top: 175px;
+    left: 250px;
 }
